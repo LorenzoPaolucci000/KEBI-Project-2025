@@ -30,6 +30,7 @@ ingredient(potato).
 % Plant products
 ingredient(chocolate).
 % Nut
+ingredient(almond).
 ingredient(pistachio).
 % Meat
 ingredient(bacon).
@@ -69,6 +70,7 @@ ingredient(banana).
 ingredient(strawberry).
 
 % KCAL
+kcal_ingredient(almond, 90).
 kcal_ingredient(anchovy, 19).
 kcal_ingredient(apple, 35).
 kcal_ingredient(arugula, 3).
@@ -151,6 +153,8 @@ ingredient_vegetarian(zucchini).
 ingredient_vegetarian(apple).
 ingredient_vegetarian(banana).
 ingredient_vegetarian(strawberry).
+
+% INTOLERANCE
 % lactose Intolerance
 ingredient_with_lactose_intolerance(butter).
 ingredient_with_lactose_intolerance(cream).
@@ -163,6 +167,7 @@ ingredient_with_gluten_intolerance(bread).
 ingredient_with_gluten_intolerance(type_0_flour).
 ingredient_with_gluten_intolerance(pasta).
 % Nut Intolerance
+ingredient_with_nut_intolerance(almond).
 ingredient_with_nut_intolerance(pistachio).
 
 % MEALS
@@ -191,11 +196,11 @@ meal(pizza_tri-color, main_dish, [oil, salt, water, arugula, tomato, parmesan, b
 meal(pizza_contadina, main_dish, [oil, salt, water, olive, ham, mozzarella_cheese, type_0_flour]).
 meal(pizza_pepperoni, main_dish, [oil, salt, water, type_0_flour, mozzarella_cheese, sausage, pepperoni]).
 % Dessert
-meal(fruit_salad, dessert, [sugar, apple, banana, strawberry]).
-meal(crepes, dessert, [sugar, butter, chocolate, egg, milk, type_0_flour]).
+meal(fruit_salad, dessert, [almond, apple, banana, strawberry, sugar]).
+meal(crepes, dessert, [butter, chocolate, egg, milk, type_0_flour, sugar]).
 % Drink
 meal(water, drink, [water]).
-meal(coca_cola, drink, [water, sugar, food_coloring]).
+meal(coca_cola, drink, [food_coloring, sugar, water]).
 
 % FILTERS
 % Vegetarian Meal
@@ -248,8 +253,7 @@ meal_calories(Meal, Course, TotalCalories) :-
 calorie_conscious_levels(Meal, Course, Levels) :-
     meal_calories(Meal, Course, TotalCalories),
     % Highest applicable level based on total calories
-    ( TotalCalories > 0 -> HighestLevel = 0
-    ; TotalCalories =< 650 -> HighestLevel = 4
+    ( TotalCalories > 650 -> HighestLevel = 0
     ; TotalCalories =< 250 -> HighestLevel = 3
     ; TotalCalories =< 450 -> HighestLevel = 2
     ; TotalCalories =< 650 -> HighestLevel = 1
@@ -277,9 +281,11 @@ guest_preferences(Category, CalorieLevel, Allergies, Meal, Course) :-
 
 % SOME QUERY FOR TESTING:
 % guest_preferences(omnivore, 0, none, Meal, Course).
+% guest_preferences(omnivore, 1, nut, Meal, Course).
 % guest_preferences(omnivore, 0, gluten, Meal, Course).
 % guest_preferences(carnivorous, 2, none, Meal, Course).
 % guest_preferences(carnivorous, 0, none, Meal, Course).
 % guest_preferences(carnivorous, 0, lactose, Meal, Course).
 % guest_preferences(vegetarian, 3, none, Meal, Course).
+% guest_preferences(vegetarian, 2, nut, Meal, Course).
 % guest_preferences(vegetarian, 1, none, Meal, Course).
