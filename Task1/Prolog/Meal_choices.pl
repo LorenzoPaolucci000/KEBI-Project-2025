@@ -1,45 +1,51 @@
 % INGREDIENTS
-% Spices
+% Other
+ingredient(sugar).
+ingredient(food_coloring).
+ingredient(water).
+% Seasoning
+ingredient(chili).
+ingredient(lemon).
+ingredient(garlic).
+ingredient(oil).
+ingredient(pepper).
+ingredient(salt).
+ingredient(vinegar).
+% Aromatic Herbs
 ingredient(arugula).
 ingredient(basil).
-ingredient(lemon).
-ingredient(oil).
-ingredient(garlic).
 ingredient(parsley).
-ingredient(pepper).
 ingredient(rosemary).
-ingredient(salt).
 ingredient(sage).
-ingredient(sugar).
-ingredient(water).
 % Vegetables
 ingredient(capsicum).
-ingredient(chili).
 ingredient(eggplant).
 ingredient(mashroom).
 ingredient(olive).
 ingredient(onion).
-ingredient(potato).
 ingredient(tomato).
 ingredient(zucchini).
-% Vegetal products/Nut
+% Tuber
+ingredient(potato).
+% Plant products
 ingredient(chocolate).
+% Nut
 ingredient(pistachio).
-ingredient(vinegar).
-% Meat/Fish
-ingredient(anchovy). % F
-ingredient(bacon). % M
-ingredient(chicken). % M
-ingredient(cuttlefish). % F
-ingredient(ham). % M
-ingredient(octopus). % F
-ingredient(pepperoni). % M
-ingredient(salmon). % F
-ingredient(sausage). % M
-ingredient(shrimp). % F
-ingredient(squid). % F
-ingredient(steak). % M
-ingredient(tuna). % F
+% Meat
+ingredient(bacon).
+ingredient(chicken).
+ingredient(ham).
+ingredient(pepperoni).
+ingredient(sausage).
+ingredient(steak).
+% Fish
+ingredient(anchovy).
+ingredient(cuttlefish).
+ingredient(octopus).
+ingredient(salmon).
+ingredient(shrimp).
+ingredient(squid).
+ingredient(tuna).
 % Animal Products
 ingredient(butter).
 ingredient(cream).
@@ -50,70 +56,72 @@ ingredient(mozzarella_cheese).
 ingredient(parmesan).
 ingredient(pecorino).
 ingredient(ricotta).
-% Cereals/Cereal based
+% Grain Product
 ingredient(bread).
-ingredient(buckwheat_pasta).
-ingredient(buckwheat_flour).
 ingredient(pasta).
 ingredient(type_0_flour).
+% Cereal Product
+ingredient(buckwheat_pasta).
+ingredient(buckwheat_flour).
 % Fruits
 ingredient(apple).
 ingredient(banana).
 ingredient(strawberry).
 
-% KCAL for 100g
-kcal_ingredient(lemon, 14).
-kcal_ingredient(oil, 901).
-kcal_ingredient(garlic, 90).
-kcal_ingredient(pepper, 255).
-kcal_ingredient(salt, 0).
-kcal_ingredient(sugar, 392).
-kcal_ingredient(water, 0).
-kcal_ingredient(arugula, 16).
-kcal_ingredient(basil, 15).
-kcal_ingredient(capsicum, 22).
-kcal_ingredient(chili, 26).
-kcal_ingredient(chocolate, 545).
-kcal_ingredient(eggplant, 18).
-kcal_ingredient(mashroom, 21).
-kcal_ingredient(olive, 235).
-kcal_ingredient(onion, 25).
-kcal_ingredient(parsley, 18).
-kcal_ingredient(pistachio, 600).
-kcal_ingredient(potato, 83).
-kcal_ingredient(rosemary, 110).
-kcal_ingredient(sage, 116).
-kcal_ingredient(tomato, 19).
-kcal_ingredient(zucchini, 13).
-kcal_ingredient(anchovy, 96).
-kcal_ingredient(bacon, 661).
-kcal_ingredient(chicken, 270).
+% KCAL
+kcal_ingredient(anchovy, 19).
+kcal_ingredient(apple, 35).
+kcal_ingredient(arugula, 3).
+kcal_ingredient(bacon, 198).
+kcal_ingredient(banana, 40).
+kcal_ingredient(basil, 1).
+kcal_ingredient(bread, 135).
+kcal_ingredient(buckwheat_flour, 103).
+kcal_ingredient(buckwheat_pasta, 278).
+kcal_ingredient(butter, 75).
+kcal_ingredient(capsicum, 11).
+kcal_ingredient(chicken, 324).
+kcal_ingredient(chili, 15).
+kcal_ingredient(chocolate, 109).
+kcal_ingredient(cream, 40).
 kcal_ingredient(cuttlefish, 72).
-kcal_ingredient(ham, 224).
+kcal_ingredient(egg, 80).
+kcal_ingredient(eggplant, 18).
+kcal_ingredient(food_coloring, 5).
+kcal_ingredient(garlic, 3).
+kcal_ingredient(ham, 45).
+kcal_ingredient(honey, 46).
+kcal_ingredient(lemon, 4).
+kcal_ingredient(mashroom, 15).
+kcal_ingredient(milk, 128).
+kcal_ingredient(mozzarella_cheese, 100).
 kcal_ingredient(octopus, 60).
-kcal_ingredient(salmon, 170).
-kcal_ingredient(sausage, 304).
-kcal_ingredient(shrimp, 80).
+kcal_ingredient(oil, 60).
+kcal_ingredient(olive, 47).
+kcal_ingredient(onion, 13).
+kcal_ingredient(parmesan, 75).
+kcal_ingredient(parsley, 1).
+kcal_ingredient(pasta, 300).
+kcal_ingredient(pecorino, 80).
+kcal_ingredient(pepper, 13).
+kcal_ingredient(pistachio, 120).
+kcal_ingredient(potato, 450).
+kcal_ingredient(ricotta, 89).
+kcal_ingredient(rosemary, 2).
+kcal_ingredient(sage, 2).
+kcal_ingredient(salmon, 150).
+kcal_ingredient(salt, 0).
+kcal_ingredient(sausage, 205).
+kcal_ingredient(shrimp, 35).
 kcal_ingredient(squid, 69).
-kcal_ingredient(steak, 452).
+kcal_ingredient(steak, 485).
+kcal_ingredient(strawberry, 22).
+kcal_ingredient(sugar, 39).
+kcal_ingredient(tomato, 30).
 kcal_ingredient(tuna, 158).
-kcal_ingredient(butter, 750).
-kcal_ingredient(cream, 134).
-kcal_ingredient(egg, 130).
-kcal_ingredient(honey, 304).
-kcal_ingredient(milk, 64).
-kcal_ingredient(mozzarella_cheese, 247).
-kcal_ingredient(parmesan, 374).
-kcal_ingredient(pecorino, 402).
-kcal_ingredient(ricotta, 178).
-kcal_ingredient(bread, 270).
-kcal_ingredient(buckwheat_pasta, 347).
-kcal_ingredient(buckwheat_flour, 343).
-kcal_ingredient(pasta, 360).
-kcal_ingredient(type_0_flour, 341).
-kcal_ingredient(apple, 43).
-kcal_ingredient(banana, 65).
-kcal_ingredient(strawberry, 30).
+kcal_ingredient(type_0_flour, 500).
+kcal_ingredient(water, 0).
+kcal_ingredient(zucchini, 13).
 
 % TYPE OF INGREDIENTS
 % Carnivorous Ingredient
@@ -159,11 +167,11 @@ ingredient_with_nut_intolerance(pistachio).
 
 % MEALS
 % Appetizer
-meal(bruschette, appetizer, [oil, pepper, salt, basil, mashroom, tomato, ham, mozzarella_cheese, bread]).
+meal(bruschette, appetizer, [basil, bread, ham, mashroom, mozzarella_cheese, oil, pepper, salt, tomato]).
 meal(cheese_platter_and_honey, appetizer, [honey, parmesan, pecorino, ricotta]).
-meal(french_fries, appetizer, [oil, salt, potato]).
-meal(omelette, appetizer, [oil, pepper, salt, onion, zucchini, egg]).
-meal(seafood_salad, appetizer, [oil, salt, basil, cuttlefish, octopus, shrimp, squid]).
+meal(french_fries, appetizer, [oil, potato, salt]).
+meal(omelette, appetizer, [egg, oil, onion, pepper, salt, zucchini]).
+meal(seafood_salad, appetizer, [basil, cuttlefish, octopus, oil, salt, shrimp, squid]).
 % First Dish
 meal(carbonara_pasta, first_dish, [oil, pepper, salt, bacon, egg, pecorino, pasta]).
 meal(gricia_pasta, first_dish, [oil, pepper, salt, bacon, pecorino, pasta]).
@@ -185,6 +193,9 @@ meal(pizza_pepperoni, main_dish, [oil, salt, water, type_0_flour, mozzarella_che
 % Dessert
 meal(fruit_salad, dessert, [sugar, apple, banana, strawberry]).
 meal(crepes, dessert, [sugar, butter, chocolate, egg, milk, type_0_flour]).
+% Drink
+meal(water, drink, [water]).
+meal(coca_cola, drink, [water, sugar, food_coloring]).
 
 % FILTERS
 % Vegetarian Meal
