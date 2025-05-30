@@ -1,7 +1,5 @@
 % INGREDIENTS
-% Other
-ingredient(sugar).
-ingredient(food_coloring).
+% drink
 ingredient(water).
 % Seasoning
 ingredient(chili).
@@ -10,17 +8,19 @@ ingredient(garlic).
 ingredient(oil).
 ingredient(pepper).
 ingredient(salt).
-ingredient(vinegar).
+% Sweetener
+ingredient(sugar).
+ingredient(food_coloring).
 % Aromatic Herbs
-ingredient(arugula).
 ingredient(basil).
 ingredient(parsley).
 ingredient(rosemary).
 ingredient(sage).
 % Vegetables
+ingredient(arugula).
 ingredient(capsicum).
 ingredient(eggplant).
-ingredient(mashroom).
+ingredient(mushroom).
 ingredient(olive).
 ingredient(onion).
 ingredient(tomato).
@@ -47,16 +47,17 @@ ingredient(salmon).
 ingredient(shrimp).
 ingredient(squid).
 ingredient(tuna).
-% Animal Products
+% Dairy
 ingredient(butter).
 ingredient(cream).
-ingredient(egg).
-ingredient(honey).
 ingredient(milk).
 ingredient(mozzarella_cheese).
-ingredient(parmesan).
 ingredient(pecorino).
 ingredient(ricotta).
+% Animal Products
+ingredient(egg).
+ingredient(honey).
+ingredient(parmesan).
 % Grain Product
 ingredient(bread).
 ingredient(pasta).
@@ -94,7 +95,7 @@ kcal_ingredient(garlic, 3).
 kcal_ingredient(ham, 45).
 kcal_ingredient(honey, 46).
 kcal_ingredient(lemon, 4).
-kcal_ingredient(mashroom, 15).
+kcal_ingredient(mushroom, 15).
 kcal_ingredient(milk, 128).
 kcal_ingredient(mozzarella_cheese, 100).
 kcal_ingredient(octopus, 60).
@@ -106,6 +107,7 @@ kcal_ingredient(parsley, 1).
 kcal_ingredient(pasta, 300).
 kcal_ingredient(pecorino, 80).
 kcal_ingredient(pepper, 13).
+kcal_ingredient(pepperoni, 150).
 kcal_ingredient(pistachio, 120).
 kcal_ingredient(potato, 450).
 kcal_ingredient(ricotta, 89).
@@ -144,7 +146,7 @@ ingredient_carnivore(tuna). % F
 ingredient_vegetarian(arugula).
 ingredient_vegetarian(capsicum).
 ingredient_vegetarian(eggplant).
-ingredient_vegetarian(mashroom).
+ingredient_vegetarian(mushroom).
 ingredient_vegetarian(potato).
 ingredient_vegetarian(olive).
 ingredient_vegetarian(onion).
@@ -172,19 +174,19 @@ ingredient_with_nut_intolerance(pistachio).
 
 % MEALS
 % Appetizer
-meal(bruschette, appetizer, [basil, bread, ham, mashroom, mozzarella_cheese, oil, pepper, salt, tomato]).
+meal(bruschette, appetizer, [basil, bread, ham, mushroom, mozzarella_cheese, oil, pepper, salt, tomato]).
 meal(cheese_platter_and_honey, appetizer, [honey, parmesan, pecorino, ricotta]).
 meal(french_fries, appetizer, [oil, potato, salt]).
 meal(omelette, appetizer, [egg, oil, onion, pepper, salt, zucchini]).
 meal(seafood_salad, appetizer, [basil, cuttlefish, octopus, oil, salt, shrimp, squid]).
 % First Dish
 meal(carbonara_pasta, first_dish, [oil, pepper, salt, bacon, egg, pecorino, pasta]).
-meal(gricia_pasta, first_dish, [oil, pepper, salt, bacon, pecorino, pasta]).
+meal(gricia_pasta, first_dish, [oil, pepper, salt, bacon, pecorino, buckwheat_pasta]).
 meal(norcina_pasta, first_dish, [oil, pepper, salt, parmesan, sausage, cream, pasta]).
 meal(norma_pasta, first_dish, [oil, salt, eggplant, tomato, ricotta, pasta]).
 meal(spaghetti_garlic_oil_and_chili, first_dish, [oil, garlic, salt, chili, buckwheat_pasta]).
 % Second Course
-meal(grilled_salmon, second_course, [lemon, oil, salt, chili, parsley, salmon, pistachio, vinegar]).
+meal(grilled_salmon, second_course, [lemon, oil, salt, chili, parsley, salmon, pistachio]).
 meal(ratatouille, second_course, [oil, garlic, salt, basil, capsicum, eggplant, onion, parsley, tomato, zucchini]).
 meal(roasted_chicken, second_course, [oil, garlic, pepper, salt, rosemary, sage, chicken]).
 meal(steak, second_course, [lemon, oil, pepper, salt, steak, rosemary]).
@@ -194,7 +196,7 @@ meal(pizza_margherita, main_dish, [oil, salt, water, basil, tomato, mozzarella_c
 meal(pizza_ortolana, main_dish, [oil, salt, water, basil, capsicum , eggplant, onion, tomato, zucchini, buckwheat_flour]).
 meal(pizza_tri-color, main_dish, [oil, salt, water, arugula, tomato, parmesan, buckwheat_flour]).
 meal(pizza_contadina, main_dish, [oil, salt, water, olive, ham, mozzarella_cheese, type_0_flour]).
-meal(pizza_pepperoni, main_dish, [oil, salt, water, type_0_flour, mozzarella_cheese, sausage, pepperoni]).
+meal(pizza_pepperoni, main_dish, [oil, salt, water, mozzarella_cheese, sausage, pepperoni, type_0_flour]).
 % Dessert
 meal(fruit_salad, dessert, [almond, apple, banana, strawberry, sugar]).
 meal(crepes, dessert, [butter, chocolate, egg, milk, type_0_flour, sugar]).
