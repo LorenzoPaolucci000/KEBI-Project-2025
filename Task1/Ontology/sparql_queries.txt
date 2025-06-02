@@ -1,0 +1,210 @@
+__________Prefix for the queries__________
+
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX kebi: <http://www.semanticweb.org/andrea.mazzetti-lorenzo.paolucci/kebi2025#>
+
+
+__________1. Carnivorous meals__________
+
+
+SELECT ?meal
+WHERE {
+  ?meal rdf:type kebi:Meal .
+  ?meal kebi:food_hasCategory kebi:category_carnivorous .
+}
+
+
+__________2. Vegetarian meals__________
+
+
+SELECT ?meal
+WHERE {
+  ?meal rdf:type kebi:Meal .
+  ?meal kebi:food_hasCategory kebi:category_vegetarian .
+}
+
+
+__________3. Meal ingredients (bruschette)__________
+
+
+SELECT ?ingredient
+WHERE {
+  kebi:meal_bruschette kebi:meal_hasIngredient ?ingredient .
+}
+
+
+__________4. All ingredients kcal__________
+
+
+SELECT ?ingredient ?kcal
+WHERE {
+  ?ingredient a ?type .
+  ?type rdfs:subClassOf* kebi:Ingredient .
+  ?ingredient kebi:food_hasKcal ?kcal .
+}
+
+
+__________5. All meals with kcal__________
+
+
+SELECT ?meal ?calories
+WHERE {
+  ?meal rdf:type kebi:Meal .
+  ?meal kebi:food_hasKcal ?calories .
+}
+
+
+__________6. Specific ingredient kcal (pecorino)__________
+
+
+SELECT ?kcal
+WHERE {
+  kebi:ingredient_pecorino kebi:food_hasKcal ?kcal .
+}
+
+
+__________7. Specific meal kcal (ratatouille)__________
+
+
+SELECT ?kcal
+WHERE {
+  kebi:meal_ratatouille kebi:food_hasKcal ?kcal .
+}
+
+
+__________8. Meals with level 3 of conscious calorie__________
+
+
+SELECT DISTINCT ?meal ?calorie
+WHERE {
+  ?meal rdf:type ?type .
+  ?meal kebi:meal_hasLevelOfCalorieConscious ?calorie .
+  FILTER(?calorie = 3)
+}
+
+
+__________9. Guests with allergy__________
+
+
+SELECT ?guest ?allergy
+WHERE {
+  ?guest a kebi:Guest ;
+           kebi:guest_hasAllergy ?allergy .
+}
+
+
+__________10. Ingredients with gluten intolerance__________
+
+
+SELECT ?ingredient
+WHERE {
+  ?ingredient a ?type .
+  ?type rdfs:subClassOf* kebi:Ingredient .
+  ?ingredient kebi:grainProduct_containsGlutenIntolerance kebi:allergy_gluten .
+}
+
+
+__________11. Ingredients with lactose intolerance__________
+
+
+SELECT ?ingredient
+WHERE {
+  ?ingredient a ?type .
+  ?type rdfs:subClassOf* kebi:Ingredient .
+  ?ingredient kebi:dairy_containsLactoseIntolerance kebi:allergy_lactose .
+}
+
+
+__________12. Ingredients with nut intolerance__________
+
+
+SELECT ?ingredient
+WHERE {
+  ?ingredient a ?type .
+  ?type rdfs:subClassOf* kebi:Ingredient .
+  ?ingredient kebi:nutProduct_containsNutIntolerance kebi:allergy_nut .
+}
+
+
+__________13. Ingredient classified as dairy__________
+
+
+SELECT ?ingredient
+WHERE {
+  ?ingredient rdf:type kebi:Dairy.
+}
+
+
+__________14. Ingredient classified as meat__________
+
+
+SELECT ?ingredient
+WHERE {
+  ?ingredient rdf:type kebi:Meat.
+}
+
+
+__________15. Meals classified as appetizer__________
+
+
+SELECT ?meal
+WHERE {
+  ?meal rdf:type kebi:Meal .
+  ?meal kebi:meal_hasCourse kebi:course_appetizer .
+}
+
+
+__________16. Meals classified as first-dish__________
+
+
+SELECT ?meal
+WHERE {
+  ?meal rdf:type kebi:Meal .
+  ?meal kebi:meal_hasCourse kebi:course_first-dish .
+}
+
+
+__________17. Meals classified as second-course__________
+
+
+SELECT ?meal
+WHERE {
+  ?meal rdf:type kebi:Meal .
+  ?meal kebi:meal_hasCourse kebi:course_second-course .
+}
+
+
+__________18. Meals that has more then 600 kcal__________
+
+
+SELECT ?meal ?kcal
+WHERE {
+  ?meal kebi:food_hasKcal ?kcal .
+  FILTER(?kcal > 600) .
+}
+
+
+__________19. Meals based of the preferences of the guest1__________
+
+
+SELECT DISTINCT ?meal ?mealName
+WHERE {
+  kebi:guest_guest1 a kebi:Guest ;
+  kebi:guest_hasAllergy ?allergy ;
+  kebi:guest_hasCategory ?category;
+  kebi:guest_hasPreferenceCourse ?course ;
+  kebi:guest_hasLevelOfCalorieConscious ?calorieLevel .
+
+  ?meal a kebi:Meal;
+  kebi:food_hasCategory ?category ;
+  kebi:meal_hasLevelOfCalorieConscious ?calorieLevel ;
+  kebi:meal_hasCourse ?course ;
+  kebi:thing_hasName ?mealName .
+
+  MINUS {?meal kebi:meal_containsGlutenIntolerance ?allergy }
+  MINUS {?meal kebi:meal_containsLactoseIntolerance ?allergy }
+}
