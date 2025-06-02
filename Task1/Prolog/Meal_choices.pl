@@ -3,14 +3,14 @@
 ingredient(water).
 % Seasoning
 ingredient(chili).
-ingredient(lemon).
 ingredient(garlic).
+ingredient(lemon).
 ingredient(oil).
 ingredient(pepper).
 ingredient(salt).
 % Sweetener
-ingredient(sugar).
 ingredient(food_coloring).
+ingredient(sugar).
 % Aromatic Herbs
 ingredient(basil).
 ingredient(parsley).
@@ -21,7 +21,6 @@ ingredient(arugula).
 ingredient(capsicum).
 ingredient(eggplant).
 ingredient(mushroom).
-ingredient(olive).
 ingredient(onion).
 ingredient(tomato).
 ingredient(zucchini).
@@ -68,6 +67,7 @@ ingredient(buckwheat_flour).
 % Fruits
 ingredient(apple).
 ingredient(banana).
+ingredient(olive).
 ingredient(strawberry).
 
 % KCAL
