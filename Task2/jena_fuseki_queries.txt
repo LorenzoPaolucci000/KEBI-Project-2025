@@ -1,0 +1,47 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mod: <http://fhnw.ch/modelingEnvironment/ModelOntology#>
+PREFIX lo: <http://fhnw.ch/modelingEnvironment/LanguageOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX kebi: <http://www.semanticweb.org/andrea.mazzetti-lorenzo.paolucci/kebi2025#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?meal ?category ?levelCC ?allergy ?course
+WHERE {
+  mod:Meal_Suggestion_f907089d-8120-4f63-b6a1-81446d9edc8f lo:guest_hasCategory ?category .
+  mod:Meal_Suggestion_f907089d-8120-4f63-b6a1-81446d9edc8f lo:guest_hasCalorieConsciousLevel ?levelCC .
+  mod:Meal_Suggestion_f907089d-8120-4f63-b6a1-81446d9edc8f lo:guest_hasAllergy ?allergy .
+  mod:Meal_Suggestion_f907089d-8120-4f63-b6a1-81446d9edc8f lo:guest_hasCoursePreference ?course .
+
+  BIND(IF(?category = "Vegetarian", kebi:category_vegetarian,
+           IF(?category = "Carnivorous", kebi:category_carnivorous,
+        	   IF(?category = "Omnivore", kebi:category_omnivore, ?category))) AS ?finalCategory) .
+  
+  BIND(IF(?course = "Appetizer", kebi:course_appetizer,
+           IF(?course = "First Dish", kebi:course_first-dish,
+              IF(?course = "Main Dish", kebi:course_main-dish,
+                 IF(?course = "Second Course", kebi:course_second-course,
+                    IF(?course = "Sidedish", kebi:course_sidedish,
+                       IF(?course = "Dessert", kebi:course_dessert, ?course)))))) AS ?finalCourse) .
+  
+  BIND(IF(?allergy = "Gluten", kebi:grain_containsGlutenIntolerance,
+              IF(?allergy = "Lactose", kebi:dairy_containsLactoseIntolerance,
+              IF(?allergy = "Nut", kebi:nutProduct_containsNutIntolerance,
+                 IF(?allergy = "none", "none", ?allergy)))) AS ?finalAllergy) .
+  
+  ?meal a kebi:Meal .
+  ?meal kebi:meal_hasLevelOfCalorieConscious ?kcal .
+  FILTER(?kcal = ?levelCC)
+
+  ?meal kebi:food_hasCategory ?finalCategory .
+  ?meal kebi:meal_hasCourse ?finalCourse .
+
+  OPTIONAL {
+    ?meal kebi:meal_hasIngredient ?ingredient .
+    ?ingredient rdf:type ?ingredientType .
+    FILTER ((?finalAllergy = "none") ||
+            (?finalAllergy = kebi:grain_containsGlutenIntolerance && ?ingredientType = kebi:Grain) ||
+            (?finalAllergy = kebi:dairy_containsLactoseIntolerance && ?ingredientType = kebi:Dairy) ||
+            (?finalAllergy = kebi:nutProduct_containsNutIntolerance && ?ingredientType = kebi:NutProduct))
+  }
+  FILTER (!BOUND(?ingredient))
+}
