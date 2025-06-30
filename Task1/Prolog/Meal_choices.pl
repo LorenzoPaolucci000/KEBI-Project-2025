@@ -208,6 +208,7 @@ meal(coca_cola, drink, [food_coloring, sugar, water]).
 % Vegetarian Meal
 vegetarian_meal(Meal, Course) :-
     meal(Meal, Course, Ingredients),
+    % Ensure all ingredients are either vegetarian or not carnivorous
     forall(member(Ingredient, Ingredients),
            (ingredient_vegetarian(Ingredient); \+ ingredient_carnivore(Ingredient))).
 
@@ -223,7 +224,7 @@ omnivore_meal(Meal, Course) :-
     meal(Meal, Course, Ingredients),
     forall(member(Ingredient, Ingredients), ingredient(Ingredient)).
 
-%  Meal with Gluten Intolerance
+% Meal with Gluten Intolerance
 meal_with_gluten_intolerance(Meal, Course) :-
     meal(Meal, Course, Ingredients),
     member(Ingredient, Ingredients),

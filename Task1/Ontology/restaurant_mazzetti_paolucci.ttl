@@ -1022,8 +1022,8 @@ kebi2025:ingredient_zucchini rdf:type owl:NamedIndividual ,
                              kebi2025:thing_hasName "Zucchini" .
 
 
-###  http://www.semanticweb.org/andrea.mazzetti-lorenzo.paolucci/kebi2025#meal_brushcette
-kebi2025:meal_brushcette rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/andrea.mazzetti-lorenzo.paolucci/kebi2025#meal_bruschette
+kebi2025:meal_bruschette rdf:type owl:NamedIndividual ,
                                   kebi2025:Meal ;
                          kebi2025:food_hasCategory kebi2025:category_carnivorous ,
                                                    kebi2025:category_omnivore ;
@@ -1037,6 +1037,7 @@ kebi2025:meal_brushcette rdf:type owl:NamedIndividual ,
                                                      kebi2025:ingredient_pepper ,
                                                      kebi2025:ingredient_salt ,
                                                      kebi2025:ingredient_tomato ;
+                         kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                          kebi2025:food_hasKcal 399 ;
                          kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                   1 ,
@@ -1057,6 +1058,7 @@ kebi2025:meal_carbonara-pasta rdf:type owl:NamedIndividual ,
                                                           kebi2025:ingredient_pecorino ,
                                                           kebi2025:ingredient_pepper ,
                                                           kebi2025:ingredient_salt ;
+                              kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                               kebi2025:food_hasKcal 731 ;
                               kebi2025:meal_hasLevelOfCalorieConscious 0 ;
                               kebi2025:thing_hasName "Carbonara Pasta" .
@@ -1073,6 +1075,8 @@ kebi2025:meal_cheese-platter-and-honey rdf:type owl:NamedIndividual ,
                                                                    kebi2025:ingredient_parmesan ,
                                                                    kebi2025:ingredient_pecorino ,
                                                                    kebi2025:ingredient_ricotta ;
+                                       kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                                       kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                                        kebi2025:food_hasKcal 290 ;
                                        kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                                 1 ,
@@ -1093,6 +1097,7 @@ kebi2025:meal_crepes rdf:type owl:NamedIndividual ,
                                                  kebi2025:ingredient_milk ,
                                                  kebi2025:ingredient_sugar ,
                                                  kebi2025:ingredient_type-0-flour ;
+                     kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                      kebi2025:food_hasKcal 931 ;
                      kebi2025:meal_hasLevelOfCalorieConscious 0 ;
                      kebi2025:thing_hasName "Crepes" .
@@ -1107,6 +1112,9 @@ kebi2025:meal_french-fries rdf:type owl:NamedIndividual ,
                            kebi2025:meal_hasIngredient kebi2025:ingredient_oil ,
                                                        kebi2025:ingredient_potato ,
                                                        kebi2025:ingredient_salt ;
+                           kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                           kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                           kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                            kebi2025:food_hasKcal 510 ;
                            kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                     1 ;
@@ -1124,6 +1132,8 @@ kebi2025:meal_fruit-salad rdf:type owl:NamedIndividual ,
                                                       kebi2025:ingredient_banana ,
                                                       kebi2025:ingredient_strawberry ,
                                                       kebi2025:ingredient_sugar ;
+                          kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                          kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
                           kebi2025:food_hasKcal 226 ;
                           kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                    1 ,
@@ -1144,6 +1154,8 @@ kebi2025:meal_gricia-pasta rdf:type owl:NamedIndividual ,
                                                        kebi2025:ingredient_pecorino ,
                                                        kebi2025:ingredient_pepper ,
                                                        kebi2025:ingredient_salt ;
+                           kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                           kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                            kebi2025:food_hasKcal 629 ;
                            kebi2025:meal_hasLevelOfCalorieConscious 0 ;
                            kebi2025:thing_hasName "Gricia Pasta" .
@@ -1162,6 +1174,8 @@ kebi2025:meal_grilled-salmon rdf:type owl:NamedIndividual ,
                                                          kebi2025:ingredient_pistachio ,
                                                          kebi2025:ingredient_salmon ,
                                                          kebi2025:ingredient_salt ;
+                             kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                             kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
                              kebi2025:food_hasKcal 350 ;
                              kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                       1 ,
@@ -1182,6 +1196,7 @@ kebi2025:meal_norcina-pasta rdf:type owl:NamedIndividual ,
                                                         kebi2025:ingredient_pepper ,
                                                         kebi2025:ingredient_salt ,
                                                         kebi2025:ingredient_sausage ;
+                            kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                             kebi2025:food_hasKcal 693 ;
                             kebi2025:meal_hasLevelOfCalorieConscious 0 ;
                             kebi2025:thing_hasName "Norcina Pasta" .
@@ -1199,6 +1214,7 @@ kebi2025:meal_norma-pasta rdf:type owl:NamedIndividual ,
                                                       kebi2025:ingredient_ricotta ,
                                                       kebi2025:ingredient_salt ,
                                                       kebi2025:ingredient_tomato ;
+                          kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                           kebi2025:food_hasKcal 497 ;
                           kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                    1 ;
@@ -1217,6 +1233,9 @@ kebi2025:meal_omelette rdf:type owl:NamedIndividual ,
                                                    kebi2025:ingredient_pepper ,
                                                    kebi2025:ingredient_salt ,
                                                    kebi2025:ingredient_zucchini ;
+                       kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                       kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                       kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                        kebi2025:food_hasKcal 179 ;
                        kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                 1 ,
@@ -1238,6 +1257,7 @@ kebi2025:meal_pizza-contadina rdf:type owl:NamedIndividual ,
                                                           kebi2025:ingredient_salt ,
                                                           kebi2025:ingredient_type-0-flour ,
                                                           kebi2025:ingredient_water ;
+                              kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                               kebi2025:food_hasKcal 752 ;
                               kebi2025:meal_hasLevelOfCalorieConscious 0 ;
                               kebi2025:thing_hasName "Pizza Contadina" .
@@ -1256,6 +1276,7 @@ kebi2025:meal_pizza-margherita rdf:type owl:NamedIndividual ,
                                                            kebi2025:ingredient_tomato ,
                                                            kebi2025:ingredient_type-0-flour ,
                                                            kebi2025:ingredient_water ;
+                               kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                                kebi2025:food_hasKcal 691 ;
                                kebi2025:meal_hasLevelOfCalorieConscious 0 ;
                                kebi2025:thing_hasName "Pizza Margherita" .
@@ -1277,6 +1298,9 @@ kebi2025:meal_pizza-ortolana rdf:type owl:NamedIndividual ,
                                                          kebi2025:ingredient_tomato ,
                                                          kebi2025:ingredient_water ,
                                                          kebi2025:ingredient_zucchini ;
+                             kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                             kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                             kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                              kebi2025:food_hasKcal 249 ;
                              kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                       1 ,
@@ -1298,6 +1322,7 @@ kebi2025:meal_pizza-pepperoni rdf:type owl:NamedIndividual ,
                                                           kebi2025:ingredient_sausage ,
                                                           kebi2025:ingredient_type-0-flour ,
                                                           kebi2025:ingredient_water ;
+                              kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                               kebi2025:food_hasKcal 1015 ;
                               kebi2025:meal_hasLevelOfCalorieConscious 0 ;
                               kebi2025:thing_hasName "Pizza Pepperoni" .
@@ -1316,6 +1341,9 @@ kebi2025:meal_pizza-tri-color rdf:type owl:NamedIndividual ,
                                                           kebi2025:ingredient_salt ,
                                                           kebi2025:ingredient_tomato ,
                                                           kebi2025:ingredient_water ;
+                              kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                              kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                              kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                               kebi2025:food_hasKcal 271 ;
                               kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                        1 ,
@@ -1339,6 +1367,9 @@ kebi2025:meal_ratatouille rdf:type owl:NamedIndividual ,
                                                       kebi2025:ingredient_salt ,
                                                       kebi2025:ingredient_tomato ,
                                                       kebi2025:ingredient_zucchini ;
+                          kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                          kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                          kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                           kebi2025:food_hasKcal 150 ;
                           kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                    1 ,
@@ -1360,6 +1391,9 @@ kebi2025:meal_roasted-chicken rdf:type owl:NamedIndividual ,
                                                           kebi2025:ingredient_rosemary ,
                                                           kebi2025:ingredient_sage ,
                                                           kebi2025:ingredient_salt ;
+                              kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                              kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                              kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                               kebi2025:food_hasKcal 404 ;
                               kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                        1 ,
@@ -1380,6 +1414,9 @@ kebi2025:meal_seafood-salad rdf:type owl:NamedIndividual ,
                                                         kebi2025:ingredient_salt ,
                                                         kebi2025:ingredient_shrimp ,
                                                         kebi2025:ingredient_squid ;
+                            kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                            kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                            kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                             kebi2025:food_hasKcal 297 ;
                             kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                      1 ,
@@ -1399,6 +1436,9 @@ kebi2025:meal_spaghetti-garlic-oil-and-chili rdf:type owl:NamedIndividual ,
                                                                          kebi2025:ingredient_garlic ,
                                                                          kebi2025:ingredient_oil ,
                                                                          kebi2025:ingredient_salt ;
+                                             kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                                             kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                                             kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                                              kebi2025:food_hasKcal 356 ;
                                              kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                                       1 ,
@@ -1418,6 +1458,9 @@ kebi2025:meal_steak rdf:type owl:NamedIndividual ,
                                                 kebi2025:ingredient_rosemary ,
                                                 kebi2025:ingredient_salt ,
                                                 kebi2025:ingredient_steak ;
+                    kebi2025:meal_notContainsGlutenIntolerance kebi2025:allergy_gluten ;
+                    kebi2025:meal_notContainsLactoseIntolerance kebi2025:allergy_lactose ;
+                    kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                     kebi2025:food_hasKcal 564 ;
                     kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                              1 ;
@@ -1440,6 +1483,7 @@ kebi2025:meal_tuna-fishballs rdf:type owl:NamedIndividual ,
                                                          kebi2025:ingredient_ricotta ,
                                                          kebi2025:ingredient_salt ,
                                                          kebi2025:ingredient_tuna ;
+                             kebi2025:meal_notContainsNutIntolerance kebi2025:allergy_nut ;
                              kebi2025:food_hasKcal 630 ;
                              kebi2025:meal_hasLevelOfCalorieConscious 0 ,
                                                                       1 ;
@@ -1451,7 +1495,7 @@ kebi2025:menu_menu rdf:type owl:NamedIndividual ,
                             kebi2025:Menu ;
                    kebi2025:menu_containsDrink kebi2025:drink_coca-cola ,
                                                kebi2025:drink_water ;
-                   kebi2025:menu_containsMeal kebi2025:meal_brushcette ,
+                   kebi2025:menu_containsMeal kebi2025:meal_bruschette ,
                                               kebi2025:meal_carbonara-pasta ,
                                               kebi2025:meal_cheese-platter-and-honey ,
                                               kebi2025:meal_crepes ,
@@ -1490,23 +1534,25 @@ kebi2025:restaurant_da-gino-restaurant rdf:type owl:NamedIndividual ,
 #    Rules
 #################################################################
 
-kebi2025:category rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
 kebi2025:guest rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-kebi2025:course rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-kebi2025:meal rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+kebi2025:category rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 kebi2025:allergy rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 kebi2025:level rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+kebi2025:course rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+kebi2025:meal rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 kebi2025:ingredient rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 kebi2025:dairy rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 kebi2025:gluten rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+kebi2025:nut rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
@@ -1555,71 +1601,71 @@ kebi2025:gluten rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Category ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> kebi2025:category
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Guest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasPreferenceCourse ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasCategory ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:food_hasCategory ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasAllergy ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Allergy ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> kebi2025:allergy
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasLevelOfCalorieConscious ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Meal ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasPreferenceCourse ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Guest ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Category ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> kebi2025:category
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasCategory ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Allergy ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> kebi2025:allergy
                                                                                                                        ] ;
                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasLevelOfCalorieConscious ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Meal ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal
                                                                                                                                   ] ;
                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasLevelOfCalorieConscious ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:food_hasCategory ;
                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
                                                                                                                                              ] ;
                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasCourse ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_notContainsGlutenIntolerance ;
                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
                                                                                                                                                         ] ;
                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasAllergy ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasLevelOfCalorieConscious ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
                                                                                                                                                                    ] ;
                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_notContainsGlutenIntolerance ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasCourse ;
                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
                                                                                                                                                                               ] ;
                                                                                                                                                                     rdf:rest rdf:nil
                                                                                                                                                                   ]
@@ -1791,7 +1837,7 @@ kebi2025:gluten rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:nutProduct_containsNutIntolerance ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> kebi2025:ingredient ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> kebi2025:dairy
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> kebi2025:nut
                                                                                       ] ;
                                                                             rdf:rest rdf:nil
                                                                           ]
@@ -1802,7 +1848,7 @@ kebi2025:gluten rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_containsNutIntolerance ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> kebi2025:dairy
+                                                       <http://www.w3.org/2003/11/swrl#argument2> kebi2025:nut
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -1814,71 +1860,71 @@ kebi2025:gluten rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Category ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> kebi2025:category
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Guest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasPreferenceCourse ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasCategory ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:food_hasCategory ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasAllergy ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Allergy ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> kebi2025:allergy
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasLevelOfCalorieConscious ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Meal ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasPreferenceCourse ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Guest ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Category ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> kebi2025:category
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasCategory ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Allergy ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> kebi2025:allergy
                                                                                                                        ] ;
                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasLevelOfCalorieConscious ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Meal ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal
                                                                                                                                   ] ;
                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasLevelOfCalorieConscious ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:food_hasCategory ;
                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
                                                                                                                                              ] ;
                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasCourse ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_notContainsLactoseIntolerance ;
                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
                                                                                                                                                         ] ;
                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasAllergy ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasLevelOfCalorieConscious ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
                                                                                                                                                                    ] ;
                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_notContainsLactoseIntolerance ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasCourse ;
                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
                                                                                                                                                                               ] ;
                                                                                                                                                                     rdf:rest rdf:nil
                                                                                                                                                                   ]
@@ -1909,71 +1955,71 @@ kebi2025:gluten rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Category ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> kebi2025:category
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Guest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasPreferenceCourse ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasCategory ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:food_hasCategory ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasAllergy ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Allergy ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> kebi2025:allergy
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasLevelOfCalorieConscious ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Meal ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasPreferenceCourse ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Guest ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Category ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> kebi2025:category
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasCategory ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Allergy ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> kebi2025:allergy
                                                                                                                        ] ;
                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasLevelOfCalorieConscious ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> kebi2025:Meal ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal
                                                                                                                                   ] ;
                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasLevelOfCalorieConscious ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:food_hasCategory ;
                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> kebi2025:category
                                                                                                                                              ] ;
                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasCourse ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_notContainsNutIntolerance ;
                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
                                                                                                                                                         ] ;
                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:guest_hasAllergy ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> kebi2025:guest ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasLevelOfCalorieConscious ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> kebi2025:level
                                                                                                                                                                    ] ;
                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_notContainsNutIntolerance ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> kebi2025:meal_hasCourse ;
                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> kebi2025:meal ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> kebi2025:allergy
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> kebi2025:course
                                                                                                                                                                               ] ;
                                                                                                                                                                     rdf:rest rdf:nil
                                                                                                                                                                   ]
