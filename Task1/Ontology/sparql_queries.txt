@@ -28,12 +28,12 @@ WHERE {
 }
 
 
-__________3. Meal ingredients (bruschette)__________
+__________3. Meal ingredients (tuna-fishballs)__________
 
 
 SELECT ?ingredient
 WHERE {
-  kebi:meal_bruschette kebi:meal_hasIngredient ?ingredient .
+  kebi:meal_tuna-fishballs kebi:meal_hasIngredient ?ingredient .
 }
 
 
